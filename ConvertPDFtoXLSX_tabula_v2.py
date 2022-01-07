@@ -2,10 +2,10 @@
 import tabula
 import pandas as pd
 
-pdf_name = "/Users/adavies/Gardners/DocCentral/Analysis/07 General Operations/03 Transport/04 FY2022/TUFFNELLS/TuffInvoice.pdf"
-ExcelOutputPath = "/Users/adavies/Gardners/DocCentral/Analysis/07 General Operations/03 Transport/04 FY2022/TUFFNELLS/TuffInvoice.xlsx" # to save each page as individual file
+pdf_name = "/filepath/filename.pdf"
+ExcelOutputPath = "/filepath/filename.xlsx" # to save each page as individual file
 
-FinalFileName = "/Users/adavies/Gardners/DocCentral/Analysis/07 General Operations/03 Transport/04 FY2022/TUFFNELLS/TuffInvoice.xlsx"
+FinalFileName = "/filepath/filename.xlsx"
 
 dfAllPages = tabula.read_pdf(pdf_name, pages='all')
 
@@ -36,8 +36,8 @@ for singlePage in dfAllPages:
 # This code takes empty rows out before exporting to excel
 import tabula
 import pandas as pd
-pdf_name = "/Users/adavies/Gardners/DocCentral/Analysis/07 General Operations/03 Transport/04 FY2022/TUFFNELLS/TuffInvoice.pdf"
-FinalFileName = "/Users/adavies/Gardners/DocCentral/Analysis/07 General Operations/03 Transport/04 FY2022/TUFFNELLS/TuffInvoice.xlsx"
+pdf_name = "/filepath/filename.pdf"
+FinalFileName = "/filepath/filename.xlsx"
 dfAllPages = tabula.read_pdf(pdf_name, pages='all')
 dfMergedData = pd.DataFrame()
 dfCleanedData = pd.DataFrame()
@@ -65,7 +65,7 @@ import pandas as pd
 import tkinter as tk
 from tkinter.filedialog import askopenfilename
 pdf_name = askopenfilename()
-FinalFileName = "/Users/adavies/Gardners/DocCentral/Analysis/07 General Operations/03 Transport/04 FY2022/TUFFNELLS/TuffInvoice.xlsx" # Assign name
+FinalFileName = "/filepath/filename.xlsx" # Assign name
 dfAllPages = tabula.read_pdf(pdf_name, pages='all')
 dfMergedData = pd.DataFrame()
 dfCleanedData = pd.DataFrame()
